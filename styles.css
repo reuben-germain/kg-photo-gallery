@@ -1,180 +1,159 @@
+/* Variables */
+:root {
+    --main-font: 'sans-serif', 'monospace';
+    --primary-bg-color: #f5f6f7;
+    --text-color: #333;
+    --highlight-red: red;
+    --highlight-gold: gold;
+    --highlight-green: green;
+    --gallery-max-width: 1400px;
+    --gallery-gap: 16px;
+}
+
+/* Global Styles */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    /* padding: 0; */
+    font-family: var(--main-font);
+    background-color: var(--primary-bg-color);
     line-height: 1.6;
-    font-family: sans-serif monospace;
-    background-color: #f5f6f7;
+    color: var(--text-color);
 }
 
+a {
+    color: var(--highlight-red);
+    text-transform: uppercase;
+}
+
+/* Header Styles */
 header {
-    background-size: cover;
-    background-position: center;
-    /* height: 100vh; */
-    /* display: flex; */
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-image: url('images/saint-joe.jpeg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    position: relative;
-    overflow: hidden;
-}
-
-header img {
-    max-height: 100%;
-    max-width: 35%;
-    height: auto;
-    border-radius: 50%;
-    opacity: 0.4;
+    color: #fff;
+    background: url('images/saint-joe.jpeg') no-repeat center center/cover;
+    padding: 2em 0;
 }
 
 .hero-content {
-    font-size: 3em;
-    margin-bottom: 0.5em;
+    font-size: 2em;
+    margin: 1em 0;
 }
 
-.hero-content blockquote {
-    font-size: 1.5em;
-    font-style: italic;
-    margin-bottom: 1em;
+.highlight-text {
+    margin: 0.5em 0;
 }
 
+.highlight-text[data-color="red"] {
+    color: var(--highlight-red);
+}
+
+.highlight-text[data-color="gold"] {
+    color: var(--highlight-gold);
+}
+
+.highlight-text[data-color="green"] {
+    color: var(--highlight-green);
+}
+
+.rounded-img {
+    width: 70%;
+    max-width: 450px;
+    border-radius: 50%;
+    margin: 1em auto;
+    display: block;
+    opacity: 0.8;
+}
+
+/* Biography Styles */
 .biography {
     padding: 2em;
     margin: 0 auto;
     max-width: 1200px;
-    font-size: 1.8em;
 }
 
 .biography img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin: 0 auto;
     display: block;
-}
-
-#flag{
-    width: 70%;
-    height: auto;
-    display: flex;
-    margin: 40px auto;
+    margin: 1em auto;
     border-radius: 12em;
 }
 
-#kent-pose-waterfall {
+.flag-img {
     width: 70%;
-    height: auto;
-    position: relative;
-    display: flex;
-    margin: 40px auto;
 }
 
-.header {
-    text-align: center;
-    text-transform: uppercase;
-    padding: 32px;
-    background: #0a0a23;
+/* Footer Styles */
+footer {
+    background-color: #333;
     color: #fff;
-    border-bottom: 4px solid #fdb347;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 1em;
     text-align: center;
-    margin-top: 100px;
-    padding-bottom: 20px;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
- ul li {
-    list-style: none;
-    text-align: right;
-    margin-right: 50px;
- }
-
- a {
-    color: red;
-    text-transform: uppercase
- }
-
+/* Gallery Styles */
 .gallery {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px 10px;
-    max-width: 1400px;
+    max-width: var(--gallery-max-width);
     margin: 0 auto;
-    gap: 16px;
-}
-
-.gallery::after {
-    content: "";
-    width: 350px;
+    gap: var(--gallery-gap);
+    padding: 1em;
 }
 
 .gallery img {
     width: 100%;
     max-width: 445px;
-    /* height: 300px; */
     height: 450px;
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
 }
 
 .gallery img:hover {
     transform: scale(1.2);
-    transition: transform 0.5s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-#solo-section {
-    background-color: red;
+#solo-section, #dreadlocks-rasta-section, #post-dreadlocks-section {
     border-radius: 50px;
+    padding: 1em;
+}
+
+#solo-section {
+    background-color: var(--highlight-red);
 }
 
 #dreadlocks-rasta-section {
-    background-color: gold;
-    border-radius: 50px;
+    background-color: var(--highlight-gold);
 }
 
 #post-dreadlocks-section {
-    background-color: green;
-    border-radius: 50px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    margin-top: 2em;
-    bottom: 0;
-    width: 100%;
+    background-color: var(--highlight-green);
 }
 
 /* Media Queries */
-/* Responsive for smaller screens */
 @media (max-width: 768px) {
-    .hero-content p {
-        font-size: 0.5em;
+    .hero-content p, .hero-content blockquote {
+        font-size: 1em;
     }
 
-    .hero-content blockquote {
-        font-size: 0.4em;
+    .biography {
+        padding: 1em;
+        font-size: 1.4em;
     }
+}
 
-    header img {
-        max-width: 100%;
+@media (max-width: 480px) {
+    .hero-content p, .hero-content blockquote {
+        font-size: 0.8em;
     }
 
     .biography {
@@ -183,28 +162,6 @@ footer {
     }
 
     .biography img {
-        max-width: 100%;
-}
-
-@media (max-width: 480px) {
-    .hero-content p {
-        font-size: 0.6em;
-    }
-
-    .hero-content blockquote {
-        font-size: 0.5em;
-    }
-
-    header img {
-        max-width: 100%;
-    }
-
-    .biography {
-        padding: 1em;
-        font-size: 1.4em;
-    }
-
-    .biography img {
         max-width: 15em;
     }
-}}
+}
