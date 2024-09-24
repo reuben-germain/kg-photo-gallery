@@ -139,6 +139,22 @@ footer {
     background-color: var(--highlight-green);
 }
 
+#suit {
+    object-position: top;
+}
+
+#kent-sophie {
+    object-position: top;
+}
+
+#kent-reuben {
+    object-position: 1px 20%;
+}
+
+#krs {
+    object-position: 1px 20%;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .hero-content p, .hero-content blockquote {
