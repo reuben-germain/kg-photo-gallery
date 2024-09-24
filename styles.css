@@ -49,6 +49,15 @@ header img {
     padding: 2em;
     margin: 0 auto;
     max-width: 1200px;
+    font-size: 1.8em;
+}
+
+.biography img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
 }
 
 #flag{
@@ -152,3 +161,50 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Media Queries */
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .hero-content p {
+        font-size: 0.5em;
+    }
+
+    .hero-content blockquote {
+        font-size: 0.4em;
+    }
+
+    header img {
+        max-width: 100%;
+    }
+
+    .biography {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+
+    .biography img {
+        max-width: 100%;
+}
+
+@media (max-width: 480px) {
+    .hero-content p {
+        font-size: 0.6em;
+    }
+
+    .hero-content blockquote {
+        font-size: 0.5em;
+    }
+
+    header img {
+        max-width: 100%;
+    }
+
+    .biography {
+        padding: 1em;
+        font-size: 1.4em;
+    }
+
+    .biography img {
+        max-width: 15em;
+    }
+}}
