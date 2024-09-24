@@ -110,6 +110,21 @@ a {
     border-radius: 10px;
 }
 
+#solo-section {
+    background-color: red;
+    border-radius: 50px;
+}
+
+#dreadlocks-rasta-section {
+    background-color: gold;
+    border-radius: 50px;
+}
+
+#post-dreadlocks-section {
+    background-color: green;
+    border-radius: 50px;
+}
+
 footer {
     background-color: #333;
     color: white;
